@@ -501,5 +501,11 @@ augroup END
 
 let g:indentLine_color_tty_light = 7
 let g:indentLine_color_dark = 1
+
+"让vim记忆上次编辑的位置
+autocmd BufReadPost *
+\ if line("'\"")>0&&line("'\"")<=line("$") |
+\ exe "normal g'\"" |
+\ endif
 "-----------------------------wm end---------------------------
 
